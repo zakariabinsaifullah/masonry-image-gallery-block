@@ -1,0 +1,137 @@
+/*
+* Style Works for both Editor and Frontend
+*/
+.wp-block-migb-masonry-gallery {
+	transition: all 0.5s ease-in-out;
+	column-fill: initial;
+
+	.single-gallery-image {
+		display: block;
+		box-sizing: border-box;
+		overflow: hidden;
+		position: relative; // required for absolute-positioned caption overlay
+
+		img {
+			transition: all 0.23s ease-in-out;
+			backface-visibility: hidden;
+			width: 100%;
+			display: block;
+		}
+
+		// Caption overlay
+		figcaption.migb-caption {
+			position: absolute;
+			left: 0;
+			right: 0;
+			padding: 8px 12px;
+			background-color: rgba(0, 0, 0, 0.45);
+			color: #ffffff; // overridden by dynamic inline CSS
+			font-size: 14px; // overridden by dynamic inline CSS
+			line-height: 1.5;
+			transition: opacity 0.23s ease-in-out;
+			box-sizing: border-box;
+			text-align: center;
+
+			&.migb-caption--top {
+				top: 0;
+			}
+
+			&.migb-caption--center {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&.migb-caption--bottom {
+				bottom: 0;
+			}
+		}
+
+		// Hover effects
+		&.zoom__in:hover img {
+			transform: scale(1.05);
+		}
+
+		&.zoom__out {
+			img {
+				transform: scale(1.05);
+			}
+			&:hover img {
+				transform: scale(1);
+			}
+		}
+
+		&.gray__scale:hover img {
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
+		}
+	}
+}
+
+/* Masonry on Mobile */
+@media only screen and (max-width: 767px) {
+	.wp-block-migb-masonry-gallery {
+		@for $i from 1 through 6 {
+			&.pc__#{$i} {
+				column-count: #{$i};
+			}
+		}
+		@for $i from 0 through 101 {
+			&.pg__#{$i} {
+				gap: #{$i}px;
+			}
+		}
+		.single-gallery-image {
+			@for $i from 0 through 101 {
+				&.pg__#{$i} {
+					margin-bottom: #{$i}px;
+				}
+			}
+		}
+	}
+}
+
+/* Masonry on Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.wp-block-migb-masonry-gallery {
+		@for $i from 1 through 6 {
+			&.tc__#{$i} {
+				column-count: #{$i};
+			}
+		}
+		@for $i from 0 through 101 {
+			&.tg__#{$i} {
+				gap: #{$i}px;
+			}
+		}
+		.single-gallery-image {
+			@for $i from 0 through 101 {
+				&.tg__#{$i} {
+					margin-bottom: #{$i}px;
+				}
+			}
+		}
+	}
+}
+
+/* Masonry on Desktop */
+@media only screen and (min-width: 1024px) {
+	.wp-block-migb-masonry-gallery {
+		@for $i from 1 through 6 {
+			&.dc__#{$i} {
+				column-count: #{$i};
+			}
+		}
+		@for $i from 0 through 101 {
+			&.dg__#{$i} {
+				gap: #{$i}px;
+			}
+		}
+		.single-gallery-image {
+			@for $i from 0 through 101 {
+				&.dg__#{$i} {
+					margin-bottom: #{$i}px;
+				}
+			}
+		}
+	}
+}
