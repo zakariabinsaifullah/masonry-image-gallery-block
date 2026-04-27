@@ -260,7 +260,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 					className: `dc__${ colsNumber } tc__${ tabCol } pc__${ phoneCol } dg__${ deskGap } tg__${ tabGap } pg__${ phoneGap }`,
 				} ) }
 			>
-				{ images ? (
+				{ images && images.length > 0 ? (
 					images.map( ( image ) => (
 						<div
 							key={ image.id }

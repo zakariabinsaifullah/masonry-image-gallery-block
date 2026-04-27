@@ -55,9 +55,12 @@ Sure, the block is 100% responsive.
 
 Sure. It is highly customizable like Gutenberg default blocks.
 
+== Third Party Library == 
+[fslightbox](https://github.com/banthagroup/fslightbox) is used to create lightbox.
+
 == Changelog ==
 = 2.3.0 = 
-* Ready for review
+* Magnific Popup lightbox is depreated, so it is removed and a vanilla js library is used for speed and stability. Block will ask for attempt recovery, simple recover it.
 
 = 2.2.2 =
 * Compatible with Latest WP Version 6.6.2

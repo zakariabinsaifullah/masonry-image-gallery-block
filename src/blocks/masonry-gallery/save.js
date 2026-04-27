@@ -38,6 +38,7 @@ export default function save( { attributes } ) {
 							key={ image.id }
 							className={ itemClass }
 							href={ image.url }
+							data-fslightbox={ galleryId }
 						>
 							<img
 								src={ image.url }
