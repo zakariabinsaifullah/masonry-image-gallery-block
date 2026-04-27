@@ -26,16 +26,6 @@ import {
 
 import Devices from '../../components/devices';
 
-// ─── Static option lists ───────────────────────────────────────────────────────
-
-const BORDER_STYLES = [
-	{ label: __( 'None', 'mgb-masonry-image-gallery' ), value: 'none' },
-	{ label: __( 'Solid', 'mgb-masonry-image-gallery' ), value: 'solid' },
-	{ label: __( 'Dashed', 'mgb-masonry-image-gallery' ), value: 'dashed' },
-	{ label: __( 'Dotted', 'mgb-masonry-image-gallery' ), value: 'dotted' },
-	{ label: __( 'Double', 'mgb-masonry-image-gallery' ), value: 'double' },
-];
-
 const HOVER_EFFECTS = [
 	{ label: __( 'None', 'mgb-masonry-image-gallery' ), value: 'none' },
 	{ label: __( 'Zoom In', 'mgb-masonry-image-gallery' ), value: 'zoom__in' },
