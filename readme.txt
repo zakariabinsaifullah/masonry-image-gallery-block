@@ -1,9 +1,9 @@
-=== MGB Masonry Image Gallery  ===
+=== Masonry Image Gallery Block  ===
 Contributors: Binsaifullah
 Tags: Masonry Gallery,Image Gallery, photo gallery, gallery block, gutenberg
 Requires at least: 6.0
 Tested up to: 6.9
-Stable tag: 2.3.0
+Stable tag: 2.3.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -59,6 +59,10 @@ Sure. It is highly customizable like Gutenberg default blocks.
 [fslightbox](https://github.com/banthagroup/fslightbox) is used to create lightbox.
 
 == Changelog ==
+= 2.3.1 = 
+* Codes are optimized.
+* Placholder width issue is fixed
+
 = 2.3.0 = 
 * Magnific Popup lightbox is depreated, so it is removed and a vanilla js library is used for speed and stability. Block will ask for attempt recovery, simple recover it.
 
